@@ -1,0 +1,49 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+
+    <h1 class="title">
+
+    </h1>
+     <ion-img src="/assets/icon/logo.png"></ion-img>
+<br>
+    <ion-label position="floating">ㅤㅤㅤ E-mail</ion-label><br>
+    <ion-item class="margin-item">
+      <ion-input
+      placeholder="e-mail"
+      type="email"
+      id="inputemail"
+    ></ion-input>
+    </ion-item>
+    <ion-label position="floating">ㅤㅤㅤ senha</ion-label><br>
+    <ion-item class="margin-item">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input
+        placeholder="Digite sua senha"
+        type="password"
+        id="passwordInput"
+      ></ion-input>
+    </ion-item>
+      <button [routerLink]="['/redefinir']"
+      class="esqueceu">Esqueceu a Senha?</button>
+  <br>
+    <ion-button expand="block" [routerLink]="['/cadastro']"
+    class="resetPasswordButton">cadastre-se</ion-button>
+
+    <ion-button expand="block" [routerLink]="['/inicial']"
+    class="resetPasswordButton">Entrar</ion-button>
+
+
+    <h1>ou</h1>
+
+    <div class="button-container">
+      <ion-button id="loginother" class="entrarecadastar">
+        <ion-icon id="icon" name="logo-facebook"></ion-icon>
+      </ion-button>
+
+      <ion-button id="loginother" class="entrarecadastar">
+        <ion-icon id="icon" name="logo-instagram"></ion-icon>
+      </ion-button>
+
+      <ion-button id="loginother" class="entrarecadastar">
+        <ion-icon id="icon" name="logo-google"></ion-icon>
+      </ion-button>

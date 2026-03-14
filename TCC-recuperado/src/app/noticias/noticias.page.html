@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notícias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Itera sobre todos os artigos encontrados -->
+  <ion-card *ngFor="let article of articles">
+    <img [src]="article.image" alt="{{ article.title }}">
+    <ion-card-header>
+      <ion-card-subtitle>{{ article.source.name }} | {{ article.publishedAt | date: 'dd/MM/yyyy' }}</ion-card-subtitle>
+      <ion-card-title>{{ article.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ article.description }}</p>
+      <div class="button-container">
+        <ion-button [href]="article.url" target="_blank">Leia mais</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+   
+  <div class="tabtd">
+    <div class="retangulo">
+      <!-- Botão para a calculadora -->
+      <button [routerLink]="['/formulario']" class="formulario">
+        <ion-icon name="calculator-outline"></ion-icon>
+      </button>
+
+      <!-- Botão para a notícia com ícone -->
+      <button [routerLink]="['/inicial']" class="inicial">
+        <ion-icon name="partly-sunny-outline"></ion-icon>
+      </button> 
+ 
+
+      <button [routerLink]="['/noticias']" class="noticia">
+        <ion-icon name="newspaper-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,72 @@
+
+ion-content {
+  --background: #eff2e4; /* Define a cor de fundo da página */
+  display: flex; /* Garante que o conteúdo interno possa ser centralizado */
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos no eixo horizontal */
+  justify-content: start; /* Alinha os elementos no topo */
+  padding: 16px; /* Adiciona espaçamento interno */
+}
+
+.retangulo {
+  position: fixed; /* Fixa o footer no final da tela */
+  bottom: 0; /* Alinha ao fundo */
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  height: 60px; /* Altura fixa */
+  background-color: #8ba96e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10; /* Garante que fique acima do conteúdo */
+}
+
+/* Botões do footer */
+.retangulo button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.retangulo ion-icon {
+  font-size: 24px;
+  color: rgb(0, 0, 0); /* Ícones brancos */
+  font-size: 2rem;
+}
+
+.ion-icon {
+  font-size: 50px; /* Aumente o tamanho conforme necessário */
+  color: #333; /* Altere a cor do ícone, se quiser */
+}
+
+/* Ajusta o espaço inferior para não sobrepor o footer */
+.content-wrapper {
+  padding-bottom: 80px;
+}
+button {
+  background-color: #8ba96e; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  font-weight: bold; /* Texto em negrito */
+  padding: 10px 45%; /* Espaçamento interno */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+  display: flex; /* Define o botão como um elemento flex */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  margin: 10px auto; /* Centraliza horizontalmente o botão no contêiner */
+}
+button:hover {
+  background-color: #729457; /* Cor levemente mais escura ao passar o mouse */
+}
+
+/* Se o botão estiver dentro de um ion-item, centraliza o contêiner */
+ion-item {
+  display: flex; /* Define como um contêiner flexível */
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos no eixo horizontal */
+}
+
+
+
+  

@@ -1,0 +1,88 @@
+.container {
+  background-color: #8ba96e;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralizar horizontalmente */
+  height: 100%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px; /* Aumenta o espaço abaixo do título */
+  margin-top: 0; /* Remove o espaço acima */
+}
+.title a{
+  text-decoration: none;
+ color: #000000;
+
+}
+ion-img{
+  height: 150px;
+}
+.margin-item {
+  width: 80%;
+  margin: 10px 0px; /* Aumenta o espaçamento vertical entre os itens */
+  border: none;
+  padding: 0px;
+  border-radius: 25px;
+}
+.esqueceu{
+  margin-left: 160px;
+  font-size: 15px;
+  color: #000000;
+  background-color: transparent;
+
+}
+
+.entraresqueceu{
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+}
+
+.resetPasswordButton{
+  --background: #eff2e4;
+  color: rgb(0, 0, 0);
+  width: 70%;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.button-container:hover{
+  background-color: white;
+  text-decoration: none;
+}
+#loginother {
+  --background: transparent;
+  --color: #000;
+}
+
+#icon[name="logo-facebook"] {
+  color: #3b5998; /* Cor do ícone do Facebook */
+}
+
+#icon[name="logo-google"] {
+  color: #db4437; /* Cor do ícone do Google */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#loginother {
+  --background: transparent;
+  --color: #000;
+}
+
+#icon[name="logo-facebook"] {
+  color: #3b5998; /* Cor do ícone do Facebook */
+}
+
+#icon[name="logo-google"] {
+  color: #db4437; /* Cor do ícone do Google */
+}

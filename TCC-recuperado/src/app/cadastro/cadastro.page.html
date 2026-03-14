@@ -1,0 +1,74 @@
+<ion-content class="ion-padding bg-green-500">
+  <div class="bg-green-500 p-8 rounded-lg shadow-lg w-full">
+    <ion-button class="back-button" slot="end" [routerLink]="['/home']">Voltar</ion-button>
+    <h1 class="text-2xl font-bold text-center mb-6">CADASTRE-SE</h1>
+    <form>
+      <!-- Nome -->
+      <ion-item class="mb-4">
+        <ion-icon name="person" class="text-gray-600 mr-2"></ion-icon>
+        <ion-input type="text" placeholder="Nome" class="bg-gray-200 outline-none flex-1 p-2"></ion-input>
+      </ion-item>
+
+      <!-- Sobrenome -->
+      <ion-item class="mb-4">
+        <ion-icon name="person" class="text-gray-600 mr-2"></ion-icon>
+        <ion-input type="text" placeholder="Sobrenome" class="bg-gray-200 outline-none flex-1 p-2"></ion-input>
+      </ion-item>
+
+      <!-- E-mail -->
+      <ion-item class="mb-4">
+        <ion-icon name="mail" class="text-gray-600 mr-2"></ion-icon>
+        <ion-input type="email" placeholder="E-mail" class="bg-gray-200 outline-none flex-1 p-2"></ion-input>
+      </ion-item>
+
+      <!-- Senha -->
+      <ion-item class="mb-4">
+        <ion-icon name="lock-closed" class="text-gray-600 mr-2"></ion-icon>
+        <ion-input type="password" placeholder="Senha" class="bg-gray-200 outline-none flex-1 p-2"></ion-input>
+      </ion-item>
+
+      <!-- Confirmar Senha -->
+      <ion-item class="mb-4">
+        <ion-icon name="lock-closed" class="text-gray-600 mr-2"></ion-icon>
+        <ion-input type="password" placeholder="Confirmar Senha" class="bg-gray-200 outline-none flex-1 p-2"></ion-input>
+      </ion-item>
+
+      <!-- Idade -->
+      <ion-item class="mb-4">
+        <ion-icon name="lock-closed" class="text-gray-600 mr-2"></ion-icon>
+        <ion-input type="number" placeholder="Idade" class="bg-gray-200 outline-none flex-1 p-2"></ion-input>
+      </ion-item>
+
+      <ion-item class="mb-4">
+        <label class="block text-black mb-2">Sexo: </label>
+        <ion-select placeholder="Selecione seu sexo" class="bg-gray-200 rounded-lg flex-1 p-2">
+          <ion-select-option value="masculino">Masculino</ion-select-option>
+          <ion-select-option value="feminino">Feminino</ion-select-option>
+          <ion-select-option value="nao-prefiro">prefiro Não me identificar</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="mb-4">
+        <ion-icon name="lock-closed" class="text-gray-600 mr-2"></ion-icon>
+        <ion-input type="number" placeholder="telefone" class="bg-gray-200 outline-none flex-1 p-2"></ion-input>
+      </ion-item>
+
+      <!-- Data de nascimento -->
+      <ion-item class="mb-4">
+        <label class="block text-black mb-2">Data de nascimento: </label>
+        <ion-select placeholder="Dia" class="bg-gray-200 rounded-lg flex-1 p-2">
+          <ion-select-option *ngFor="let dia of dias" [value]="dia">{{ dia }}</ion-select-option>
+        </ion-select>
+        <ion-select placeholder="Mês" class="bg-gray-200 rounded-lg flex-1 p-2">
+          <ion-select-option *ngFor="let mes of meses" [value]="mes">{{ mes }}</ion-select-option>
+        </ion-select>
+        <ion-select placeholder="Ano" class="bg-gray-200 rounded-lg flex-1 p-2">
+          <ion-select-option *ngFor="let ano of anos" [value]="ano">{{ ano }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Botão de Cadastro -->
+      <ion-button shape="round" expand="full" class="Cadastro">Cadastrar-se</ion-button>
+    </form>
+  </div>
+</ion-content>

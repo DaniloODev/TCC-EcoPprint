@@ -1,0 +1,51 @@
+ion-content {
+  --background: #eff2e4;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+ion-title{
+  background-color: #8ba96e;
+  color: white;
+}
+h2 {
+  
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 60%;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+
+}
+
+.input-box {
+  margin: 15px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.recovery-btn {
+  --background : #8ba96e;
+  margin-top: 28px;
+  color: white;
+margin-left: 20px;
+  width: 90%;
+}
+
+.back-link {
+  position: absolute;
+  --background: #eff2e4;
+  color: black;
+  top: 28px;
+  left: 15px;
+  text-decoration: none;
+}

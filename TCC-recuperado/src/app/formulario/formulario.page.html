@@ -1,0 +1,122 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Formulário</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item class="margin-item">
+    <form id="form" class="form" action="formulario1.html" method="POST">
+
+      <div class="form-content">
+        <label for="kwh">Quantos KWh você consome mensalmente?</label>
+        <input type="number" min="0" id="kwh" name="kwh" placeholder="Digite o consumo em KWh" required />
+      </div>
+
+      <div class="form-content">
+        <label for="roupas-ano">Quantas vezes por ano você compra roupas?</label>
+        <input type="number" min="0" id="roupas-ano" name="roupas-ano" placeholder="Estimativa anual de compras" required />
+      </div>
+
+   
+      <div class="form-content">
+        <label for="pecas-media">Em média, quantas peças você compra por vez?</label>
+        <input type="number" min="0" id="pecas-media" name="pecas-media" placeholder="Estimativa média por compra" required />
+      </div>
+
+    
+      <div class="form-content">
+        <label for="fuel-consumption">Quantos litros de combustível você consome mensalmente para cada tipo de veículo?</label>
+        <select id="fuel-consumption" name="fuel-consumption" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="carro-gasolina">Carro (Gasolina/Etanol)</option>
+          <option value="carro-diesel">Carro (Diesel)</option>
+          <option value="moto-gasolina">Moto (Gasolina/Etanol)</option>
+          <option value="outro-veiculo">Outro veículo</option>
+        </select>
+      </div>
+
+     
+      <div class="form-content">
+        <label for="public-transport">Com que frequência você utiliza transporte público?</label>
+        <select id="public-transport" name="public-transport" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="varias-vezes-ao-dia">Várias vezes ao dia (Impacto bastante reduzido)</option>
+          <option value="uma-ou-duas-vezes">Uma ou duas vezes ao dia (Impacto reduzido)</option>
+          <option value="tres-a-cinco">3-5 vezes por semana (Impacto moderadamente reduzido)</option>
+          <option value="mensalmente">Mensalmente (Impacto maior)</option>
+          <option value="raramente">Raramente (Impacto alto)</option>
+          <option value="nunca">Nunca (Impacto muito alto)</option>
+        </select>
+      </div>
+
+ 
+      <div class="form-content">
+        <label for="meat-consumption">Quantas vezes você consome carne (bovina, suína ou de frango)?</label>
+        <select id="meat-consumption" name="meat-consumption" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="mais-de-uma-vez-por-dia">Mais de uma vez por dia (Impacto muito alto)</option>
+          <option value="4-6-vezes-por-semana">4-6 vezes por semana (Impacto moderado)</option>
+          <option value="1-3-vezes-por-semana">1-3 vezes por semana (Impacto médio)</option>
+          <option value="raramente">Raramente (Impacto reduzido)</option>
+          <option value="nunca">Nunca (Impacto muito reduzido)</option>
+        </select>
+      </div>
+
+   
+      <div class="form-content">
+        <label for="flights-per-year">Quantos voos você faz por ano?</label>
+        <input type="number" id="flights-per-year" min="0" name="flights-per-year" placeholder="Digite a quantidade de voos" required />
+      </div>
+
+     
+      <div class="form-content">
+        <label for="water-consumption">Qual é o seu consumo médio de água por mês (em metros cúbicos)?</label>
+        <input type="number" id="water-consumption" min="0" name="water-consumption" placeholder="Digite o consumo em m³" required />
+      </div>
+
+   
+      <div class="form-content">
+        <label for="organic-food">Você consome alimentos orgânicos?</label>
+        <select id="organic-food" name="organic-food" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="sempre">Sim, em todas as refeições (Impacto muito reduzido)</option>
+          <option value="regularmente">Sim, regularmente (Impacto reduzido)</option>
+          <option value="as-vezes">Às vezes (Impacto moderado)</option>
+          <option value="raramente">Raramente (Impacto médio)</option>
+          <option value="nunca">Nunca (Impacto alto)</option>
+        </select>
+      </div>
+
+  
+      <div class="form-content">
+        <label for="recycling-frequency">Quantas vezes por mês você recicla ou reutiliza produtos?</label>
+        <select id="recycling-frequency" name="recycling-frequency" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="sempre">Sempre (Impacto muito reduzido)</option>
+          <option value="algumas-vezes">Algumas vezes (Impacto reduzido)</option>
+          <option value="nunca">Nunca (Impacto elevado)</option>
+        </select>
+      </div>
+              <a div class="confirmar">continuar</a>
+
+    </form>
+  </ion-item>
+  <div class="retangulo">
+    <button [routerLink]="['/formulario']" class="formulario">
+      <ion-icon name="calculator-outline"></ion-icon>
+    </button>
+    <button [routerLink]="['/inicial']" class="inicial">
+      <ion-icon name="partly-sunny-outline"></ion-icon>
+    </button>
+    <button [routerLink]="['/noticias']" class="noticia">
+      <ion-icon name="newspaper-outline"></ion-icon>
+    </button>
+  </div>
+</ion-content>

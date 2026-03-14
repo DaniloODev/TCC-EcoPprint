@@ -1,0 +1,133 @@
+/* Estilo geral do formulário */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* Estilo para os campos de input */
+input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px; /* Arredondamento das bordas */
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus, select:focus {
+  border-color: #8ba96e; /* Cor da borda ao focar */
+  outline: none;
+}
+
+/* Estilo das labels */
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Espaçamento entre os itens do formulário */
+.form-content {
+  margin-bottom: 20px;
+}
+
+/* Estilo para o título principal do formulário */
+ion-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  justify-content: center;
+}
+
+/* Estilo para os itens de listagem (ion-item) */
+ion-item {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* Estilo para exibição do texto selecionado */
+ion-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilo para ion-toolbar */
+ion-toolbar {
+  background-color: #8ba96e;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Título do ion-header */
+ion-title {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 1000;
+}
+
+/* Botões do formulário */
+button {
+  background-color: #8ba96e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #729057;
+}
+
+/* Estilo do footer fixo */
+.retangulo {
+  position: fixed; /* Fixa o footer no final da tela */
+  bottom: 0; /* Alinha ao fundo */
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  height: 60px; /* Altura fixa */
+  background-color: #8ba96e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10; /* Garante que fique acima do conteúdo */
+}
+
+/* Botões do footer */
+.retangulo button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.retangulo ion-icon {
+  font-size: 24px;
+  color: rgb(0, 0, 0); /* Ícones brancos */
+  font-size: 2rem;
+}
+
+.ion-icon {
+  font-size: 50px; /* Aumente o tamanho conforme necessário */
+  color: #333; /* Altere a cor do ícone, se quiser */
+}
+
+/* Ajusta o espaço inferior para não sobrepor o footer */
+.content-wrapper {
+  padding-bottom: 80px;
+}
+.confirmar{
+ align-items: center;
+ justify-content: center;
+ display: flex;
+ background-color: #729057;
+  padding: 10px 10px;
+  color: #fff;
+}

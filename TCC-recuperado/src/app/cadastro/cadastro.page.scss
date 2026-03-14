@@ -1,0 +1,104 @@
+ion-content {
+  --ion-background-color: #8ba96e;
+}
+
+ion-content h1 {
+  text-align: center;
+}
+
+ion-toolbar {
+  text-align: center;
+  box-shadow: none;
+}
+
+ion-header {
+  box-shadow: none;
+}
+
+#novoapp {
+  position: relative;
+  text-align: center;
+}
+
+#text-top {
+  font-size: 30px;
+}
+
+#linklog {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+#linkpass {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  color: white;
+}
+
+ion-input.input,
+div {
+  --background: #8ba96e;
+  margin-top: 10%;
+}
+
+.input {
+  border: none;
+  box-shadow: none;
+  background-color: white;
+}
+
+#icon {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0 10px 0 0;
+  border: 0;
+}
+
+#loginother {
+  width: 66%;
+  font-size: 12.5px;
+}
+
+#hd {
+  color: #8ba96e;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex > ion-select {
+  flex: 1;
+  margin-right: 8px;
+}
+
+.flex > ion-select:last-child {
+  margin-right: 0;
+}
+.back-button {
+  position: absolute;
+  --background: #eff2e4;
+  color: black;
+  top: 16px;
+  left: 16px;
+}
+.mb-4{
+  --background: #eff2e4;
+padding-top: 5px;
+padding-bottom: 5px;
+border-radius: 15%;
+}
+.Cadastro{
+  padding-top: 15px;
+  --background: #eff2e4;
+  --color: black;
+  border-radius: 25%;
+}
+.Cadastro :active{
+  --background: black;
+}
+

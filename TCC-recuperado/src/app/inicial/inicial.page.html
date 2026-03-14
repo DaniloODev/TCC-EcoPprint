@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Campo para entrada do nome da cidade -->
+  <ion-item>
+    <ion-input
+      [(ngModel)]="cityName"
+      placeholder="Digite o nome da cidade"
+    ></ion-input>
+  </ion-item>
+
+  <!-- Botão de busca abaixo do campo -->
+  <button expand="block"  (click)="fetchWeatherByCityName()">
+    Buscar
+  </button>
+
+  <!-- Alerta para mensagens de erro ou informação -->
+  <div *ngIf="alertMessage" class="alert-message">
+    <p>{{ alertMessage }}</p>
+  </div>
+
+  <!-- Cartão com as informações do clima -->
+  <ion-card *ngIf="weatherData">
+    <ion-card-header>
+      <ion-card-title>{{ weatherData.city }}, {{ weatherData.country }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img 
+        [src]="'https://openweathermap.org/img/wn/' + weatherData.tempIcon + '@2x.png'" 
+        alt="Ícone do Clima"
+        class="weather-icon"
+      >
+      <p>Temperatura: {{ weatherData.temp.toFixed(1) }}°C</p>
+      <p>Máxima: {{ weatherData.tempMax.toFixed(1) }}°C</p>
+      <p>Mínima: {{ weatherData.tempMin.toFixed(1) }}°C</p>
+      <p>Descrição: {{ weatherData.description }}</p>
+      <p>Humidade: {{ weatherData.humidity }}%</p>
+      <p>Vento: {{ weatherData.windSpeed.toFixed(1) }} km/h</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="retangulo">
+    <button [routerLink]="['/formulario']" class="formulario">
+      <ion-icon name="calculator-outline"></ion-icon>
+    </button>
+    <button [routerLink]="['/inicial']" class="inicial">
+      <ion-icon name="partly-sunny-outline"></ion-icon>
+    </button>
+    <button [routerLink]="['/noticias']" class="noticia">
+      <ion-icon name="newspaper-outline"></ion-icon>
+    </button>
+  </div>
+</ion-content>
