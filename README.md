@@ -14,9 +14,20 @@ EcoPrint é uma aplicação Full Stack [Web/Mobile] desenvolvida para democratiz
 * **Backend/BaaS:** Node.js, Google Firebase (Firestore/Realtime DB)
 * **Estilização:** CSS e SCSS
 
-## ⚙️ Como Rodar Localmente
+## ⚙️ Como Rodar Localmente (TCC - Recuperado) - Mobile
 
 Certifique-se de ter o [Node.js](https://nodejs.org/) instalado na sua máquina.
 
 1. Clone o repositório:
-    git clone []
+    -git clone [https://github.com/DaniloODev/TCC-EcoPprint.git]
+2. Abra o terminal do seu SO e vá até o repositório (Ex.: cd Documentos/tcc/aqui).
+3. Instale as dependências:
+    -npm install
+4. Inicie o servidor de desenvolvimento:
+   -ionic serve
+
+🧠 Aprendizados
+
+Este projeto de conclusão de curso me permitiu integrar o ciclo de vida completo de um software. O maior desafio foi estruturar a comunicação assíncrona com o Firebase e garantir que o estado da aplicação no React/Ionic se mantivesse consistente e com boa performance.
+
+Para mais informações: contact.danilodev@gmail.com
