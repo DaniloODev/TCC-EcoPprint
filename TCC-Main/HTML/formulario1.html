@@ -1,0 +1,185 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Consumo</title>
+  <link rel="stylesheet" href="../CSS/formulario1.css">
+  <link rel="icon" href="../IMAGE/logo.png" type="image/icon type">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <script type="module" src="../JAVASCRIPT/authState.js"></script>
+  <script type="module" src="../JAVASCRIPT/novo.js"></script>
+  <script src="../JAVASCRIPT/formulario.js" type="module"></script>
+  <header>
+    <nav class="navbar">
+        <nav class="navbar">
+            <div class="navbar-left">
+              <a href="novo.html" class="logo">EcoPrint
+                <img src="../IMAGE/logo.png" alt="EcoPrint">
+              </a>
+            </div>
+            <div class="nav-items">
+              <div class="nav-item">
+                <a href="../HTML/noticia.html">
+                  Notícias
+                  <i class="bi bi-search"></i>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="../HTML/Ranks.html">
+                  Ranks
+                  <i class="fas fa-chart-line"></i>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="../HTML/formulario.html">
+                  Calculadora
+                  <i class="fas fa-calculator"></i>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="../HTML/sobrenos.html">
+                  Sobre Nós
+                  <i class="fas fa-store"></i>
+                </a>
+              </div>
+            </div>
+          </nav>
+        <div class="navbar-right">
+            <div class="right-items">
+                <a href="../HTML/upgrade.html" class="upgrade-button">Premium</a>ㅤ
+                <a href="../HTML/login.html" class="login-button" id="login" hidden>Logar</a>ㅤ
+                <a href="../HTML/cadastro.html" class="signin-button" id="cadastro" hidden>Cadastre-se</a>
+                <div class="avatar">
+                    <i class="bi bi-person-circle icon-large" id="user-icon"></i>
+                    <ul class="dropdown-menu" id="dropdown-menu">
+                        <li><a href="configuracao.html">Configuração</a></li>
+                        <li><a href="../HTML/relatorio.html">relatar problema</a></li>
+                        <li><a href="../HTML/feedback.html">feedback</a></li>
+                        <li><a href="../HTML/historico.html">Histórico de Cálculos</a></li>
+                        <li><button type="button" id="button" onclick="logOut()" hidden>  sair da conta</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<script>
+    const userIcon = document.getElementById('user-icon');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    userIcon.addEventListener('click', () => {
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Fecha o menu se o usuário clicar fora dele
+    window.addEventListener('click', (event) => {
+        if (!userIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.style.display = 'none';
+        }
+    });
+</script>
+<div class="container">
+  <section class="header">
+    <h2>Formulário de Consumo</h2>
+  </section>
+
+  <form id="form" class="form">
+    <!-- Frequência de uso de transporte público -->
+    <div class="form-content">
+      <label for="transporte-publico">Com que frequência você utiliza transporte público?</label>
+      <select id="transporte-publico" name="transporte-publico" required>
+        <option value="" disabled selected>Selecione uma opção.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</option>
+        <option value="varias-vezes-ao-dia">Várias vezes ao dia (Impacto bastante reduzido)</option>
+        <option value="uma-ou-duas-vezes">Uma ou duas vezes ao dia (Impacto reduzido)</option>
+        <option value="tres-a-cinco">3-5 vezes por semana (Impacto moderadamente reduzido)</option>
+        <option value="mensalmente">Mensalmente (Impacto maior)</option>
+        <option value="raramente">Raramente (Impacto alto)</option>
+        <option value="nunca">Nunca (Impacto muito alto)</option>
+      </select>
+  
+    </div>
+
+    <div class="form-content">
+      <label for="consumo-carne">Quantas vezes você consome carne (bovina, suína, ou de frango)?</label>
+      
+      <div class="input-container">
+        <select id="consumo-carne" name="consumo-carne" required>
+          <option value="" disabled selected>
+            Selecione uma opçãoㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </option>
+          <option value="varias-vezes-ao-dia">
+            Mais de uma vez por dia (Impacto muito alto, especialmente para carne bovina)
+          </option>
+          <option value="uma-ou-duas-vezes">
+            4-6 vezes por semana (Impacto moderado)
+          </option>
+          <option value="tres-a-cinco">
+            1-3 vezes por semana (Impacto médio)
+          </option>
+          <option value="mensalmente">
+            Raramente (Impacto reduzido)
+          </option>
+          <option value="raramente">
+            Nunca (Impacto muito reduzido)
+          </option>
+        </select>
+      </div>
+    </div>
+
+
+    <!-- Voos por ano -->
+    <div class="form-content">
+      <label for="voo-por-ano">Quantos voos você faz por ano?</label>
+      <input
+        type="number"
+        id="voo-por-ano"
+        min="0"
+        name="voo-por-ano"
+        placeholder="Digite a quantidade de voos"
+        required
+      />
+   
+    </div>
+
+    <!-- Consumo de água -->
+    <div class="form-content">
+      <label for="consumo-agua">Qual é o seu consumo médio de água por mês (em metros cúbicos)?</label>
+      
+      <div class="input-container">
+        <input type="number" min="0" id="consumo-agua" name="consumo-agua" placeholder="Digite o consumo em m³" required />
+      </div>
+
+    
+    </div>
+    <button type="button" onclick="nextPage1()">continuar</button>
+    <br>
+  </form>
+</div>
+   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+   <script>
+     new window.VLibras.Widget('https://vlibras.gov.br/app');
+   </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

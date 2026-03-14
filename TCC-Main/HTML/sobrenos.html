@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPrint</title>
+    <link rel="stylesheet" href="../CSS/sobrenos.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../IMAGE/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <script type="module" src="../JAVASCRIPT/authState.js"></script>
+  <script type="module" src="../JAVASCRIPT/novo.js"></script>
+  <header>
+     <nav class="navbar">
+          <nav class="navbar">
+              <div class="navbar-left"> 
+                <a href="novo.html" class="logo">EcoPrint
+                  <img src="../IMAGE/logo.png" alt="EcoPrint">
+                </a>
+              </div>
+              <div class="nav-items">
+                <div class="nav-item">
+                  <a href="../HTML/noticia.html">
+                    Notícias
+                    <i class="bi bi-search"></i>
+                  </a>
+                </div>
+                <div class="nav-item">
+                  <a href="../HTML/Ranks.html">
+                    Ranks
+                    <i class="fas fa-chart-line"></i>
+                  </a>
+                </div>
+                <div class="nav-item">
+                  <a href="../HTML/formulario.html">
+                    Calculadora
+                    <i class="fas fa-calculator"></i>
+                  </a>
+                </div>
+                <div class="nav-item">
+                  <a href="../HTML/sobrenos.html">
+                    Sobre Nós
+                    <i class="fas fa-store"></i>
+                  </a>
+                </div>
+              </div>
+            </nav>
+          <div class="navbar-right">
+              <div class="right-items">
+                  <a href="../HTML/upgrade.html" class="upgrade-button">Premium</a>ㅤ
+                  <a href="../HTML/login.html" class="login-button" id="login" hidden>Logar</a>ㅤ
+                  <a href="../HTML/cadastro.html" class="signin-button" id="cadastro" hidden>Cadastre-se</a>
+                  <div class="avatar">
+                      <i class="bi bi-person-circle icon-large" id="user-icon"></i>
+                      <ul class="dropdown-menu" id="dropdown-menu">
+                          <li><a href="../HTML/relatorio.html">relatar problema</a></li>
+                          <li><a href="../HTML/feedback.html">feedback</a></li>
+                          <li><a href="../HTML/historico.html" id="historico" hidden>Histórico de Cálculos</a></li>
+                          <li><a id="button" onclick="logOut()" hidden>  sair da conta</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </header>
+  <script>
+      const userIcon = document.getElementById('user-icon');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+  
+      userIcon.addEventListener('click', () => {
+          dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+      });
+  
+      // Fecha o menu se o usuário clicar fora dele
+      window.addEventListener('click', (event) => {
+          if (!userIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+              dropdownMenu.style.display = 'none';
+          }
+      });
+  </script>
+
+
+    <section div class="tudoimg">
+            <img src="../IMAGE/logo.png" alt="Imagem 1">
+        </div>
+    </section>
+    <section div class="tdtxt">
+
+   <p> ㅤO EcoPrint é uma plataforma inovadora que tem como missão ajudar indivíduos e empresas a medir, entender
+     e reduzir sua pegada de carbono de forma prática e eficiente. Utilizando uma calculadora de carbono de fácil
+      acesso, a plataforma fornece dados em tempo real sobre o impacto das atividades diárias no meio ambiente. À
+       medida que você adota práticas mais sustentáveis, sobe no ranking de sustentabilidade, podendo ganhar prêmios
+        exclusivos e recompensas por suas ações. A EcoPrint oferece uma maneira simples de engajar as pessoas em
+         um futuro mais sustentável, incentivando escolhas conscientes e o desenvolvimento de um estilo de vida mais ecológico.</p>
+
+        <p> ㅤAlém disso, com a assinatura Premium, os usuários têm acesso a recomendações personalizadas
+           e insights detalhados que os ajudam a adotar um estilo de vida mais eco-friendly, reduzindo
+            ainda mais sua pegada de carbono. Nossa missão vai além da simples medição: buscamos transformar
+             a forma como as pessoas interagem com o meio ambiente, promovendo uma maior conscientização
+              e incentivando atitudes que contribuam para a preservação do planeta. Acreditamos
+               que, com a combinação de dados, gamificação e apoio contínuo, podemos juntos criar um
+                impacto positivo e duradouro na saúde do nosso planeta.</p>
+    </section>
+<section div class="objtxt">
+        <div class="imgobj">
+        <img src="../IMAGE/obj.png">  
+        <h1>Objetivo</h1>   
+        <br>
+        <p>Informar sobre os perigos do gás carbônico e incentivar um modo de vida mais leve, com
+           menor atribuição ao processo de aceleração do efeito estufa. Além de divulgar problemas
+            associados à emissão de gases poluentes, analisar informações sobre os mesmos para gerar 
+          uma aplicação confiável.</p> 
+    </div>
+    <div class="imgobj1">
+        <img src="../IMAGE/obj-removebg-preview.png"> 
+        <h1>Metas</h1>
+<p>Nosso objetivo é desenvolver um mecanismo eficaz para reduzir a emissão de gases poluentes e promover uma vida mais saudável e sustentável. Para alcançar isso, trabalhamos para cumprir as seguintes metas:</p>
+<ul>
+    <li>Ensinar formas de controlar a emissão de gases poluentes.</li>
+    <li>Alertar sobre os riscos que o gás carbônico representa para a saúde e o meio ambiente.</li>
+    <li>Divulgar informações sobre os impactos dos gases poluentes, especialmente o dióxido de carbono.</li>
+    <li>Criar uma aplicação web interativa para educar os usuários sobre os efeitos dos gases de efeito estufa.</li>
+    <li>Utilizar tecnologias para monitorar e rastrear as emissões de dióxido de carbono e criar ferramentas de visualização de dados.</li>
+</ul>
+   
+    </div>
+</div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
